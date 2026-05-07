@@ -8,19 +8,19 @@ import PackageDescription
 import AppleProductTypes
 
 let package = Package(
-    name: "Test1",
+    name: "Simple Abstinence",
     platforms: [
         .iOS("16.0")
     ],
     products: [
         .iOSApplication(
-            name: "Test1",
+            name: "Simple Abstinence",
             targets: ["AppModule"],
-            bundleIdentifier: "LVH.Test1",
+            bundleIdentifier: "LVH.SimpleAbstinence",
             teamIdentifier: "N9UJ4BM7AU",
             displayVersion: "1.0",
             bundleVersion: "1",
-            appIcon: .placeholder(icon: .barChart),
+            appIcon: .placeholder(icon: .cloud),
             accentColor: .presetColor(.indigo),
             supportedDeviceFamilies: [
                 .pad,
@@ -31,7 +31,8 @@ let package = Package(
                 .landscapeRight,
                 .landscapeLeft,
                 .portraitUpsideDown(.when(deviceFamilies: [.pad]))
-            ]
+            ],
+            appCategory: .healthcareFitness
         )
     ],
     targets: [
@@ -40,5 +41,5 @@ let package = Package(
             path: "."
         )
     ],
-    swiftLanguageVersions: [.version("6")]
+    swiftLanguageModes: [.version("6")]
 )
